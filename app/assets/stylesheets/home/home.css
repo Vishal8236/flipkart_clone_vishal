@@ -1,0 +1,30 @@
+/* category navigation css classes start from here */
+.category-box{
+    border-bottom: 0.3px solid  #d6d6c2;
+    background-color: white;
+}
+.category{
+  display: flex;
+  justify-content: space-between;
+  margin: 3px 15px 3px 15px;
+
+}
+.category-option{
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.category-option > img{
+  height: 80px;
+  width: 80px;
+}
+
+/* image sliding css start from here */
+.item-dashboard{
+  background-color: #f1f3f6;
+}
+.slideshow-container{
+  padding: 8px 13px 8px 13px;
+}

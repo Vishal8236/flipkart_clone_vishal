@@ -1,0 +1,137 @@
+/* navigation css */
+.navbar-top{
+  background-color: #2874f0;
+}
+.nav-l{
+  padding: 8px 110px 8px 110px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items:center;
+  color: white;
+}
+.img-search{
+  display: flex;
+}
+.logo-text{
+  margin-right: 10px;
+}
+.logo-text > span{
+  font-size: 12px;
+}
+.n-search-logo{
+  background-color: white;
+  padding: 11px 8px 2px 8px;
+  border-radius: 2px;
+  align-items: center;
+}
+.s-icon{
+  width: 22px;
+  height: 22px;
+  color: #2874f0;
+  background-color: white;
+}
+.n-search-logo > input{
+   /* padding: 6px 4px 6px 4px; */
+   width: 360px;
+   margin-left: 4px;
+   outline: none;
+   border: none;
+}
+.l-button{
+  background-color: white;
+  border-radius: 2px;
+  padding: 2px 30px 2px 30px;
+}
+.l-button > span{
+  color: #2874f0;
+  font-size: 20px;
+  font-weight: 250;
+}
+.more-icon{
+  font-size: 18px;
+  font-weight: bold;
+}
+.down-icon{
+  width: 10px;
+  height: 10px;
+}
+.cart-icon{
+  display: flex;
+  align-items: center;
+}
+.cart-icon > span{
+  padding-left: 5px;
+}
+.c-icon{
+  padding-bottom: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+
+/* popover-login */
+.popover__wrapper > a{
+  text-decoration: none;
+}
+.popover__wrapper > a:hover{
+  text-decoration: none;
+}
+.popover__title {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+.popover__wrapper {
+  position: relative;
+  display: inline-block;
+}
+.popover__content {
+  width: 250px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -98px;
+  top: 50px;
+  transform: translate(0, 10px);
+  background-color: white;
+  padding: 16px 0px 16px 0px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  color: black;
+}
+.popover__content:before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  right: calc(50% - 10px);
+  top: -8px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent white transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.popover__wrapper:hover .popover__content {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -20px);
+  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+.popover__message {
+  text-align: center;
+}
+.popover-option{
+  align-items: center;
+  padding: 0px 13px 0px 13px;
+  font-size: 14px;
+}
+.popover-text{
+  margin-left: 10px;
+}
+.login-p-icon{
+  color: #2874f0;
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,67 @@
+<!-- category navigation -->
+<div class="category-box">
+  <div class="category">
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+      <span>Top Offers</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="">
+      <span>Grocery</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="">
+      <span>Mobiles</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+      <span>Fashion</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+      <span>Electronics</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/ee162bad964c46ae.png?q=100" alt="">
+      <span>Home</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt="">
+      <span>Appliances</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100" alt="">
+      <span>Travel</span>
+    </div>
+    <div class="category-option">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="">
+      <span>Beauty, Toys & More</span>
+    </div>
+  </div>
+</div>
+
+<!-- item show dashboard start from here -->
+<div class="item-dashboard">
+  <!-- image sliding -->
+  <section>
+    <div class="slideshow-container">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% @slideshowImage.each do |getimg| %>
+            <div class="carousel-item" id=img-<%= getimg.id %> >
+              <img class="d-block w-100" src=<%= getimg.imgLink %> alt="slide">
+            </div>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  </section>
+</div>
+<%= javascript_pack_tag 'home' %>

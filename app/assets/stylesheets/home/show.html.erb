@@ -1,0 +1,20 @@
+<div id="page-content">
+
+  <h1 class="text-center mt-4"><%= @user.username %></h1>
+  <div class="text-center">
+    <%= gravatar_for @user, size: 200, class:'rounded mx-auto d-block' %>
+  </div>
+  <% if logged_in? && @user == current_user %>
+    <div class="text-center mt-4">
+      <%= link_to 'Edit Profile', edit_user_path(@user), class:"btn btn-outline-primary" %>
+    </div>
+  <% end %>
+
+  <div class="flickr_pagination mt-4">
+      <%= will_paginate @article, :container => false %>
+  </div>
+
+  <h1 class="text-center mt-4">Articles</h1>
+
+  <%= render 'articles/article' %>
+</div>
