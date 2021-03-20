@@ -1,0 +1,52 @@
+<!-- create a new user signup form -->
+<div class="signup-container">
+  <div class="signup-column">
+    <div class="left-box">
+      <div class="left-box-text">
+        <h2>Look like you're new here!</h2>
+        <span>Signup with your email and mobile number to get started</span>
+      </div>
+      <div class="img-box">
+        <%=image_tag("flipkart-signup.png", alt: "Example Image")%>
+      </div>
+    </div>
+    <div class="right-box">
+        <!-- now we create user information form -->
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="form-box">
+            <div class="input-option">
+              <%= f.text_field :name, autofocus: true, autocomplete: 'name',placeholder:'full name' %>
+            </div>
+
+            <div class="input-option">
+              <%= f.telephone_field :phone, autofocus: true, autocomplete: 'phone',placeholder:'phone' %>
+            </div>
+
+            <div class="input-option">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:'email' %>
+            </div>
+
+            <div class="input-option"> <!--password_field-->
+              <%= f.password_field :password, autocomplete: "new-password", placeholder:"password" %>
+            </div>
+            <div class="form-submit-link">
+              <div class="link-option">
+                <span>By continuing, you agree to Flipkart's Terms of Use and Privacy Policy.</span>
+              </div>
+              <div class="link-option-continue">
+                <div class="pt-2 pb-2">
+                  <%= f.submit "Sign up", class:'continue-button' %>
+                </div>
+              </div>
+              <div class="link-option-exist">
+                <div class="pt-2 pb-2">
+                  <%= link_to 'Existing User? Log in', new_user_session_path, class:'exist-user-button'%>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
