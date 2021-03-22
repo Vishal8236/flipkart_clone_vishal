@@ -11,7 +11,11 @@
           <%= icon("search", class: "s-icon") %>
         </div>
       </li>
-      <li class="l-button"><span>Login</span></li>
+      <% if user_signed_in? %>
+        <li><%= current_user.get_first_name(current_user.name) %></li>
+      <% else %>
+        <li class="l-button"><%= link_to "Login", new_user_session_path, class:'' %></li>
+      <% end %>
       <li class="more-icon">
         <div class="popover__wrapper">
           <a href="#">
